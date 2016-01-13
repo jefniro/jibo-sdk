@@ -1,0 +1,454 @@
+@import "ui-variables";
+
+.animation-editor {
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+}
+.animation-editor > div{
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.animation-preview {
+    width: 100%;
+    height: 100%;
+    order: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+}
+
+@animation-channel-tick-width: 18px;
+@animation-channel-tick-height: 40px;
+
+.animation-timeline {
+    width: 100%;
+    background: #363636;
+    overflow: auto;
+    -webkit-user-select: none;
+}
+
+.animation-timeline .time-display {
+    height: 22px;
+    color: #9f9f9f;
+    text-align: right;
+}
+
+.animation-timeline .time-display > .frame-rate {
+}
+
+.animation-timeline .time-display > .frames {
+    height: 22px;
+    line-height: 22px;
+}
+
+.animation-timeline .time-display > .seconds {
+    padding-left: 3px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.animation-timeline .time-display > .new-layer {
+  padding-left: 3px;
+  height: 20px;
+  line-height: 22px;
+  margin-left: 5px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.animation-timeline .delete {
+  margin-top: 13px;
+  float: right;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 12px;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.animation-timeline .flags{
+    width: 56px;
+    height: 39px;
+    border-right: thin solid #525252;
+    float: left;
+}
+
+.animation-channel-label.selected .flags{
+    border-right: thin solid #CFAE67;
+    padding-left: 2px;
+}
+
+.animation-timeline .locked, .animation-timeline .visible{
+    padding: 13px 9px 0px 9px;
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 12px;
+    position: relative;
+    cursor: pointer;
+    width: 22px;
+    height: 38px;
+}
+
+.animation-channel-label .drop-bottom.drag-over:after{
+    content: "";
+    display: block;
+    width: 270px;
+    height: 6px;
+    background: #1F8BFF;
+    margin-top: 16px;
+}
+
+.animation-channel-label .drop-top.drag-over:before{
+    content: "";
+    display: block;
+    width: 270px;
+    height: 6px;
+    background: #1F8BFF;
+    margin-top: -4px;
+}
+
+.animation-channel-label .drop-top.drag-over:first-child:before{
+    margin-top: -1px;
+}
+
+.animation-timeline .fa-circle.locked, .animation-timeline .fa-circle.visible{
+    font-size: 7px;
+    top: -2px;
+    left: 2px;
+}
+
+.animation-timeline-notches-container{
+
+    height: 22px;
+}
+.animation-timeline-notch {
+    cursor: ew-resize;
+    width: (@animation-channel-tick-width * 5);
+    height: @animation-channel-tick-height / 2;
+    line-height: @animation-channel-tick-height / 2;
+    font-size: 10px;
+    padding-left: 6px;
+    color: #a5a5a7;
+    display: inline-block;
+    float: left;
+}
+
+.animation-channel {
+    height: @animation-channel-tick-height;
+    clear: both;
+}
+
+.animation-channel-label {
+    width: @animation-channel-tick-width * 15;
+    height: @animation-channel-tick-height;
+    line-height: @animation-channel-tick-height;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 12px;
+    float: left;
+    background: #363636;
+    color: #959597;
+    border-top: thin solid #525252;
+}
+
+.animation-channel-label input{
+    background: none;
+    border: none;
+    cursor: pointer;
+    left: -51px;
+    position: relative;
+}
+.animation-channel-label input:focus{
+    background: white;
+    border: thin solid grey;
+    color: #3f3f3f;
+}
+
+.animation-channel-label .type{
+    float: right;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.animation-channel-label.selected {
+    background: #CE8D01;
+}
+
+.animation-channel-label.odd {
+    background: #404040;
+}
+.animation-channel-label.selected.odd {
+    background: #CE8D01;
+}
+
+.animation-channel-label:last-child{
+    border-bottom: thin solid #525252;
+}
+.animation-channel .animation-channel-keyframes {
+    display: inline-block;
+}
+
+.animation-channel-keyframes {
+    cursor: pointer;
+    height: @animation-channel-tick-height + 2;
+}
+
+@keyframe-slot-color: #404040;
+@keyframe-slot-shadow: #3A3A3A;
+@keyframe-slot-hightlight: #4B4B4B;
+
+.animation-channel  .animation-channel-keyframe-slot {
+    width: @animation-channel-tick-width;
+    height: @animation-channel-tick-height;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+
+    background: @keyframe-slot-color;
+    border-left: thin solid @keyframe-slot-hightlight;
+    border-top: thin solid @keyframe-slot-hightlight;
+    border-right: thin solid @keyframe-slot-shadow;
+    border-bottom: thin solid @keyframe-slot-shadow;
+}
+
+@keyframe-marker-color: #3C3C3C;
+@keyframe-marker-shadow: #3A3A3A;
+@keyframe-marker-hightlight: #4B4B4B;
+
+.animation-channel .animation-channel-keyframe-slot.marker {
+    background: @keyframe-marker-color;
+    border-left: thin solid @keyframe-marker-hightlight;
+    border-top: thin solid @keyframe-marker-hightlight;
+    border-right: thin solid @keyframe-marker-shadow;
+    border-bottom: thin solid @keyframe-marker-shadow;
+}
+
+.animation-channel .animation-channel-keyframe-slot.selected {
+    background: #635433;
+}
+
+.animation-channel .animation-channel-keyframe-slot.exists {
+    border: thin solid #2f2f2f;
+}
+
+.animation-channel .animation-channel-keyframe-slot.selected.exists {
+    background: #CE8D01;
+}
+
+.animation-channel .animation-channel-keyframe-slot.exists:after{
+    content: "•";
+    position: relative;
+    float: left;
+    color: #1f1f1f;
+    margin-left: 0px;
+    margin-top: -3px;
+    font-size: 29px;
+}
+
+.animation-channel .animation-channel-keyframe-slot:hover {
+    opacity: 0.4;
+}
+
+.animation-channel .animation-channel-keyframe-slot.drag-over,
+.animation-channel .animation-channel-keyframe-slot.marker.drag-over,
+.animation-channel .animation-channel-keyframe-slot.exceeds.drag-over,
+.animation-channel .animation-channel-keyframe-slot.selected.drag-over,
+.animation-channel .animation-channel-keyframe-slot.exists.drag-over{
+    background: #1F8BFF;
+    opacity: 1.0;
+}
+
+.animation-channel .animation-channel-keyframe-slot.drag-over-empty,
+.animation-channel .animation-channel-keyframe-slot.marker.drag-over-empty,
+.animation-channel .animation-channel-keyframe-slot.exceeds.drag-over-empty,
+.animation-channel .animation-channel-keyframe-slot.selected.drag-over-empty,
+.animation-channel .animation-channel-keyframe-slot.exists.drag-over-empty{
+    background: #37526F;
+    opacity: 1.0;
+}
+.animation-channel .animation-channel-keyframe-slot.drag-over-mismatched,
+.animation-channel .animation-channel-keyframe-slot.marker.drag-over-mismatched,
+.animation-channel .animation-channel-keyframe-slot.exceeds.drag-over-mismatched,
+.animation-channel .animation-channel-keyframe-slot.selected.drag-over-mismatched,
+.animation-channel .animation-channel-keyframe-slot.exists.drag-over-mismatched{
+    background: #6F1212;
+    border: thin solid #664C4C;
+    opacity: 1.0;
+}
+
+.animation-channel .animation-channel-keyframe-slot.exceeds {
+    background-color: #5E3737;
+}
+
+.animation-channel .animation-channel-keyframe-slot > .slot-effect{
+    background: green;
+    width: @animation-channel-tick-width - 2;
+    height: @animation-channel-tick-height - 2;
+    display: none;
+    position: absolute;
+}
+
+.animation-timeline-indicator {
+    position: absolute;
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.animation-timeline-indicator-handle {
+    width: 17px;
+    height: 22px;
+    margin: 0px 2px 2px 1px;
+    background: red;
+    border: thin solid #9f0000;
+    cursor: ew-resize;
+}
+
+.animation-timeline-indicator-line {
+    width: 2px;
+    background: #9f0000;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.animation-channel-labels-container {
+    width: 271px;
+    clear: both;
+    background: #404040;
+    border-right: thin solid #363636;
+}
+
+.animation-editor-playback-controls{
+    background: #3f3f3f;
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    margin-top: -57px;
+    z-index: 2;
+    border: thin solid #525252;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 26px;
+}
+
+.animation-editor-playback-controls > i {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 8.5px;
+    color: #afafaf;
+    margin-top: 0px;
+}
+
+.animation-editor-playback-controls > .fa {
+    cursor: pointer;
+}
+.animation-editor-playback-controls > .fa:hover{
+    color: #efefef;
+}
+
+.animation-editor-playback-controls > .fa-gear{
+    color: #6f6f6f;
+    padding: 6.5px;
+}
+.animation-editor-playback-controls > .fa-gear:hover{
+    color: #9f9f9f;
+}
+
+.animation-preview > canvas{
+    cursor: pointer;
+}
+
+.event-editor > atom-text-editor.is-focused {
+    outline: auto -webkit-focus-ring-color;
+}
+
+.animation-settings {
+    width: 150px;
+    height: 63px;
+    position: relative;
+    margin-top: -100px;
+    margin-left: 121px;
+    z-index: 1;
+}
+
+.settings-container{
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    z-index: 1;
+}
+.settings-container > label{
+    color: grey;
+    display: block;
+}
+
+.settings-mousetrap{
+    position:absolute;
+    width: 10000px;
+    height: 10000px;
+    margin-left: -5000px;
+    margin-top: -5000px;
+    z-index: -1;
+}
+
+
+/*
+.right-pane input[type="number"] {
+  color: @text-color;
+  font-family: @font-family;
+  background-color: @input-background-color;
+  font-size: (@font-size + 4);
+  border: 1px solid @input-border-color;
+}
+*/
+
+.animation-editor-properties {
+    background: @base-background-color;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.animation-editor-properties input[type="number"]:focus{
+    background: #616161;
+    color: #afafaf;
+}
+
+.animation-editor-properties input[type="number"]:focus::selection{
+    background: #afaf3f;
+}
+
+.animation-editor .face {
+  background-color: @tree-view-background-color;
+}
+
+.eye-mode {
+  border-bottom: 1px solid @panel-heading-border-color;
+  border-top: 1px solid fadein(@background-color-highlight, 10%);
+
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(@panel-heading-background-color, darken(@panel-heading-background-color, 10%));
+  width: 100%;
+}
+
+.video-container {
+  background-color: @tree-view-background-color;
+}

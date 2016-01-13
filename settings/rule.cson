@@ -1,0 +1,6 @@
+'.source.rule':
+  'editor':
+    'autoIndentOnPaste': false
+    'softTabs': true
+    'tabLength': 4
+    'commentStart': '# '

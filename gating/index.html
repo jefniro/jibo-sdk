@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jibo SDK Early Access Login</title>
+    <style>
+        body{
+            margin: 0px;
+            width: 500px;
+            height: 650px;
+        }
+        webview {
+            border: none;
+            width: 500px;
+            height: 650px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <webview id="website" partition="login" width="500" height="650" autosize="on" style="width:500px; height:650px" src="https://developers-dev.jibo.com/jibo/"></webview>
+    -->
+    <!-- -->
+    <webview id="website" partition="login" width="500" height="650" autosize="on" style="width:500px; height:650px" src="http://developers.jibo.com/jibo/"></webview>
+
+    <script>
+        require('../lib/gating/app');
+    </script>
+</body>
+</html>

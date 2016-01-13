@@ -1,0 +1,33 @@
+@import "ui-variables";
+
+atom-text-editor::shadow {
+  .gutter .line-number {
+    &.jibo-line-number-red {
+      color: @text-color-error;
+      font-weight: bold;
+    }
+  }
+
+  .jibo-highlight-red .region {
+    background-color: @text-color-error;
+  }
+}
+
+.rule-panel {
+  height: 100%;
+  width: 480px;
+}
+
+.rule-panel .json-container {
+  display: block;
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 125px;
+  margin-bottom: 26px;
+  margin-right: 10px;
+  margin-left: 10px;
+}

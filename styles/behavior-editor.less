@@ -1,0 +1,215 @@
+@import "ui-variables";
+
+.behavior-editor-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+li.list-item.selected-item {
+  background-color: @background-color-selected;
+  span {
+    color: @text-color-highlight;
+  }
+}
+
+.right-pane {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: @tree-view-background-color;
+  overflow: hidden;
+  border: solid @pane-item-border-color 2px;
+}
+
+.right-pane h1 {
+  font-family: @font-family;
+  color: @text-color;
+  font-weight: bold;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.right-pane hr {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.right-pane p {
+  font-family: @font-family;
+  color: @text-color;
+  font-weight: bold;
+  font-size: 15px;
+  white-space: normal;
+}
+
+.arguments-scroll-container {
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  overflow-x: auto;
+}
+
+.arguments-container {
+  width: 100%;
+  height: 400px;
+}
+
+.argument-editor {
+  width: 100%;
+  height: 200px;
+}
+
+.input-div {
+  background-color: @input-background-color;
+  border: 1px solid @input-border-color;
+  box-shadow: 1px 1px 1px 0 @input-border-color inset;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px 3px;
+  font-size: 14px;
+  width: 95%;
+  height: 25px;
+  color: @text-color;
+  font-family: @font-family;
+}
+
+[contenteditable="true"].input-div {
+  white-space: nowrap;
+  overflow: hidden;
+}
+[contenteditable="true"].input-div br {
+  display:none;
+
+}
+[contenteditable="true"].input-div * {
+  display:inline;
+  white-space:nowrap;
+}
+
+.jibo-list-group {
+  list-style: none;
+  background-color: transparent;
+  border: none;
+}
+
+.behavior-selector-modal {
+  width: 800px;
+  height: 600px;
+  margin-left: -150px;
+  background-color: @input-background-color;
+  border: solid @base-border-color 1px;
+  .panel-heading {
+    height: 35px;
+  }
+
+  .contents {
+    border: solid @base-border-color 1px;
+    display: flex;
+    height: 450px;
+    margin: 10px;
+    .description-contents {
+      height: 450px;
+      width: 330px;
+      .behavior-description {
+        height: 418px;
+        margin-left: 10px;
+        background-color: @tree-view-background-color;
+        div {
+          padding: 10px;
+        }
+      }
+    }
+    .list-contents {
+      width: 223px;
+      height: 450px;
+    }
+    .list-group {
+      overflow-y: scroll;
+      height: 418px;
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      width: 100%;
+      background-color: @tree-view-background-color;
+    }
+
+    .list-group.schema-list {
+      margin-left: 5px;
+    }
+
+    .list-group:focus {
+      outline: auto -webkit-focus-ring-color;
+    }
+  }
+
+  .btn-group {
+    margin-left: 10px;
+  }
+}
+
+.asset-selector-modal {
+  width: 900px;
+  height: 600px;
+  margin-left: -150px;
+  background-color: @input-background-color;
+  border: solid @base-border-color 1px;
+  .panel-heading {
+    height: 35px;
+  }
+
+  .contents {
+    border: solid @base-border-color 1px;
+    display: flex;
+    height: 450px;
+    margin: 10px;
+    .preview-contents {
+      height: 400px;
+      width: 430px;
+      .asset-preview {
+        height: 418px;
+        padding: 10px;
+        background-color: @tree-view-background-color;
+      }
+    }
+    .list-contents {
+      width: 253px;
+      height: 450px;
+    }
+    .list-group {
+      overflow-y: scroll;
+      height: 418px;
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      width: 100%;
+      background-color: @tree-view-background-color;
+    }
+    .asset-list {
+      overflow-y: scroll;
+      height: 418px;
+      position: relative;
+      padding-right: 5px;
+      padding-left: 5px;
+      li {
+        padding-left: 5px;
+      }
+    }
+
+    .list-group:focus {
+      outline: auto -webkit-focus-ring-color;
+    }
+  }
+
+  .btn-group {
+    margin-left: 10px;
+  }
+}

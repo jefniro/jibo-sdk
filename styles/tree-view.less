@@ -1,0 +1,158 @@
+@import "ui-variables";
+
+
+.behavior-tree-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.decorator-container {
+  display: flex;
+  width: 100%;
+  flex-grow: 0.2;
+  overflow: hidden;
+}
+
+.tree-grid-view {
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  min-height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  background-color: @tree-view-background-color;
+  border: solid rgba(0, 0, 0, 0.5) 2px;
+}
+
+.tree-grid-view .arguments-scroll-container {
+  height: 92%;
+  width: 99%;
+  margin-top: 5px;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.tree-grid-view:focus .arguments-scroll-container {
+  outline: auto -webkit-focus-ring-color;
+}
+
+
+.tree-view-level {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-content {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 95%;
+  width: 100%;
+  position: absolute;
+}
+
+.row-wrapper {
+//  white-space: nowrap;
+  height: 26px;
+}
+
+.row-wrapper:hover {
+  background-color: @background-color-highlight;
+}
+
+.row-wrapper.row-wrapper-selected {
+  background-color: @background-color-selected;
+}
+
+.drop-bar {
+//  background-color: #93c3cd;
+  height: 5px;
+  width: 100%;
+}
+
+.arrow {
+  font-size: @font-size;
+  position: absolute;
+  color: @text-color;
+  padding-top: 3px;
+  font-size: large;
+}
+
+.row-wrapper > .cell {
+  /*border-bottom: 0px solid #FFFFFF;*/
+  /*border-top: 1px solid #FFFFFF;*/
+  /*border-left: 1px solid #FFFFFF;*/
+  /*border-right: 1px solid #FFFFFF;*/
+  width: 200px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  left: 0;
+}
+
+.row-wrapper-header {
+  white-space: nowrap;
+  height: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.row-wrapper-header > .cell {
+  width: 200px;
+  height: 30px;
+  display: inline-table;
+  color: #aaaaaa;
+  text-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.17);
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(#43484d, #2b2f32);
+}
+
+.row-wrapper-header > .cell > .separator {
+  width: 2px;
+  height: 100%;
+  resize: horizontal;
+  float: right;
+  cursor: ew-resize;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.row-wrapper-header > .cell > .separator:hover {
+  background-color: #bbbbbb;
+}
+
+.row-wrapper > div > p {
+  text-align: left;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  font-family: @font-family;
+//  border-left: 2px;
+//  vertical-align: middle;
+  -webkit-user-select: none;
+  color: @text-color;
+}
+.row-wrapper > div > p.row-selected-text {
+  color: @text-color-highlight;
+}
+
+
+.row-wrapper-header > div > h1 {
+  text-align: left;
+  font-size: 15px;
+  line-height: 15px;
+  min-height: 15px;
+  margin: 0px;
+  margin-left: 5px;
+  position: absolute;
+  font-family: @font-family;
+  margin-top: 7px;
+}

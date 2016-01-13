@@ -1,0 +1,106 @@
+'atom-workspace':
+  'ctrl-alt-g': 'jibo-atom:new-project'
+  'ctrl-alt-c': 'jibo-atom:cheat-sheet'
+  'ctrl-alt-p': 'jibo-atom:play'
+  'ctrl-alt-s': 'jibo-atom:stop'
+  'ctrl-alt-j': 'atom-react:styleguide'
+  'ctrl-alt-d': 'jibo-atom:debug-pane'
+  'ctrl-alt-h': 'jibo-atom:html-tab'
+
+'.platform-darwin .workspace .editor, .platform-darwin .workspace':
+  'cmd-r': 'jibo-atom:run-skill'
+'.platform-linux .workspace .editor, .platform-linux .workspace':
+  'cmd-r': 'jibo-atom:run-skill'
+'.platform-win32 .workspace .editor, .platform-win32 .workspace':
+  'f5': 'jibo-atom:run-skill'
+  'ctrl-r': 'jibo-atom:run-skill'
+
+'.behavior-editor atom-text-editor:not([mini])':
+  'up': 'core:move-up'
+  'down': 'core:move-down'
+
+'.behavior-editor atom-text-editor':
+  'up': 'core:move-up'
+  'down': 'core:move-down'
+  'backspace' : 'core:backspace'
+  'delete' : 'core:delete'
+
+'.behavior-editor .tree-grid-view':
+  'up': 'jibo-atom:up'
+  'down': 'jibo-atom:down'
+  'ctrl-alt-/': 'jibo-atom:skip-selected'
+  'cmd-/': 'jibo-atom:skip-selected'
+  'backspace' :'jibo-atom:delete-bt-elem'
+  'delete': 'jibo-atom:delete-bt-elem'
+
+'.package-generator':
+  'escape': 'jibo-atom:escape'
+
+'.behavior-selector-modal':
+  'up': 'jibo-atom:up'
+  'down': 'jibo-atom:down'
+  'enter': 'jibo-atom:confirm'
+  'right': 'jibo-atom:right'
+  'left': 'jibo-atom:left'
+  'escape': 'jibo-atom:escape'
+
+'.animation-editor':
+  'cmd-a': 'jibo-atom:select-all-keyframes'
+  'cmd-d': 'jibo-atom:clear-keyframe-selection'
+  's': 'jibo-atom:upsert-keyframe'
+  'a': 'jibo-atom:upsert-all'
+  'r': 'jibo-atom:reset-keyframes'
+  'd': 'jibo-atom:delete'
+  'backspace': 'jibo-atom:delete'
+  'delete': 'jibo-atom:delete'
+  'escape': 'jibo-atom:stop-playing'
+  'space': 'jibo-atom:start-playing'
+  'left': 'jibo-atom:step-backward'
+  'right': 'jibo-atom:step-forward'
+  'down': 'jibo-atom:next-layer'
+  'up': 'jibo-atom:previous-layer'
+
+'.animation-editor .animation-channel-label input':
+  's': 'native!'
+  'a': 'native!'
+  'r': 'native!'
+  'd': 'native!'
+  'backspace': 'native!'
+  'delete': 'native!'
+  'left': 'native!'
+  'right': 'native!'
+  'enter': 'native!'
+  'space': 'native!'
+
+ '.animation-editor .animation-settings .settings-container input':
+   'enter': 'jibo-atom:confirm'
+
+'.animation-editor atom-text-editor':
+  'backspace': 'core:backspace'
+  'delete': 'core:delete'
+  'left': 'core:move-left'
+  'right': 'core:move-right'
+  's': 'native!'
+  'a': 'native!'
+  'r': 'native!'
+  'd': 'native!'
+  'space': 'native!'
+  'enter': 'core:confirm'
+  'escape': 'jibo-atom:lose-focus'
+
+ '.animation-editor .event-editor atom-text-editor:not([mini])':
+   'enter': 'editor:newline'
+   'up': 'core:move-up'
+   'down': 'core:move-down'
+   'escape': 'jibo-atom:lose-focus'
+   'ctrl-s': 'jibo-atom:upsert-and-save'
+
+'.debug-pane atom-text-editor' :
+  'backspace': 'core:backspace'
+  'delete': 'core:delete'
+  'left': 'core:move-left'
+  'right': 'core:move-right'
+  's': 'native!'
+  'a': 'native!'
+  'r': 'native!'
+  'enter': 'core:confirm'
