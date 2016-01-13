@@ -1,7 +1,7 @@
 {
   "name": "jibo-sdk",
   "main": "./lib/main",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "Jibo's Robot plugin.",
   "scripts": {
     "test": "gulp test"
