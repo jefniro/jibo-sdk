@@ -1,19 +1,19 @@
 'atom-workspace':
-  'ctrl-alt-g': 'jibo-atom:new-project'
-  'ctrl-alt-c': 'jibo-atom:cheat-sheet'
-  'ctrl-alt-p': 'jibo-atom:play'
-  'ctrl-alt-s': 'jibo-atom:stop'
+  'ctrl-alt-g': 'jibo-sdk:new-project'
+  'ctrl-alt-c': 'jibo-sdk:cheat-sheet'
+  'ctrl-alt-p': 'jibo-sdk:play'
+  'ctrl-alt-s': 'jibo-sdk:stop'
   'ctrl-alt-j': 'atom-react:styleguide'
-  'ctrl-alt-d': 'jibo-atom:debug-pane'
-  'ctrl-alt-h': 'jibo-atom:html-tab'
+  'ctrl-alt-d': 'jibo-sdk:debug-pane'
+  'ctrl-alt-h': 'jibo-sdk:html-tab'
 
 '.platform-darwin .workspace .editor, .platform-darwin .workspace':
-  'cmd-r': 'jibo-atom:run-skill'
+  'cmd-r': 'jibo-sdk:run-skill'
 '.platform-linux .workspace .editor, .platform-linux .workspace':
-  'cmd-r': 'jibo-atom:run-skill'
+  'cmd-r': 'jibo-sdk:run-skill'
 '.platform-win32 .workspace .editor, .platform-win32 .workspace':
-  'f5': 'jibo-atom:run-skill'
-  'ctrl-r': 'jibo-atom:run-skill'
+  'f5': 'jibo-sdk:run-skill'
+  'ctrl-r': 'jibo-sdk:run-skill'
 
 '.behavior-editor atom-text-editor:not([mini])':
   'up': 'core:move-up'
@@ -26,39 +26,39 @@
   'delete' : 'core:delete'
 
 '.behavior-editor .tree-grid-view':
-  'up': 'jibo-atom:up'
-  'down': 'jibo-atom:down'
-  'ctrl-alt-/': 'jibo-atom:skip-selected'
-  'cmd-/': 'jibo-atom:skip-selected'
-  'backspace' :'jibo-atom:delete-bt-elem'
-  'delete': 'jibo-atom:delete-bt-elem'
+  'up': 'jibo-sdk:up'
+  'down': 'jibo-sdk:down'
+  'ctrl-alt-/': 'jibo-sdk:skip-selected'
+  'cmd-/': 'jibo-sdk:skip-selected'
+  'backspace' :'jibo-sdk:delete-bt-elem'
+  'delete': 'jibo-sdk:delete-bt-elem'
 
 '.package-generator':
-  'escape': 'jibo-atom:escape'
+  'escape': 'jibo-sdk:escape'
 
 '.behavior-selector-modal':
-  'up': 'jibo-atom:up'
-  'down': 'jibo-atom:down'
-  'enter': 'jibo-atom:confirm'
-  'right': 'jibo-atom:right'
-  'left': 'jibo-atom:left'
-  'escape': 'jibo-atom:escape'
+  'up': 'jibo-sdk:up'
+  'down': 'jibo-sdk:down'
+  'enter': 'jibo-sdk:confirm'
+  'right': 'jibo-sdk:right'
+  'left': 'jibo-sdk:left'
+  'escape': 'jibo-sdk:escape'
 
 '.animation-editor':
-  'cmd-a': 'jibo-atom:select-all-keyframes'
-  'cmd-d': 'jibo-atom:clear-keyframe-selection'
-  's': 'jibo-atom:upsert-keyframe'
-  'a': 'jibo-atom:upsert-all'
-  'r': 'jibo-atom:reset-keyframes'
-  'd': 'jibo-atom:delete'
-  'backspace': 'jibo-atom:delete'
-  'delete': 'jibo-atom:delete'
-  'escape': 'jibo-atom:stop-playing'
-  'space': 'jibo-atom:start-playing'
-  'left': 'jibo-atom:step-backward'
-  'right': 'jibo-atom:step-forward'
-  'down': 'jibo-atom:next-layer'
-  'up': 'jibo-atom:previous-layer'
+  'cmd-a': 'jibo-sdk:select-all-keyframes'
+  'cmd-d': 'jibo-sdk:clear-keyframe-selection'
+  's': 'jibo-sdk:upsert-keyframe'
+  'a': 'jibo-sdk:upsert-all'
+  'r': 'jibo-sdk:reset-keyframes'
+  'd': 'jibo-sdk:delete'
+  'backspace': 'jibo-sdk:delete'
+  'delete': 'jibo-sdk:delete'
+  'escape': 'jibo-sdk:stop-playing'
+  'space': 'jibo-sdk:start-playing'
+  'left': 'jibo-sdk:step-backward'
+  'right': 'jibo-sdk:step-forward'
+  'down': 'jibo-sdk:next-layer'
+  'up': 'jibo-sdk:previous-layer'
 
 '.animation-editor .animation-channel-label input':
   's': 'native!'
@@ -73,7 +73,7 @@
   'space': 'native!'
 
  '.animation-editor .animation-settings .settings-container input':
-   'enter': 'jibo-atom:confirm'
+   'enter': 'jibo-sdk:confirm'
 
 '.animation-editor atom-text-editor':
   'backspace': 'core:backspace'
@@ -86,14 +86,14 @@
   'd': 'native!'
   'space': 'native!'
   'enter': 'core:confirm'
-  'escape': 'jibo-atom:lose-focus'
+  'escape': 'jibo-sdk:lose-focus'
 
  '.animation-editor .event-editor atom-text-editor:not([mini])':
    'enter': 'editor:newline'
    'up': 'core:move-up'
    'down': 'core:move-down'
-   'escape': 'jibo-atom:lose-focus'
-   'ctrl-s': 'jibo-atom:upsert-and-save'
+   'escape': 'jibo-sdk:lose-focus'
+   'ctrl-s': 'jibo-sdk:upsert-and-save'
 
 '.debug-pane atom-text-editor' :
   'backspace': 'core:backspace'

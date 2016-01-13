@@ -2,31 +2,31 @@
     {
         'label': 'Jibo',
         'submenu': [
-            {'label': 'New Animation', 'command': 'jibo-atom:new-animation-file'}
-            {'label': 'New Behavior Tree', 'command': 'jibo-atom:new-behavior-tree-file'}
-            {'label': 'New Project', 'command': 'jibo-atom:new-project'}
+            {'label': 'New Animation', 'command': 'jibo-sdk:new-animation-file'}
+            {'label': 'New Behavior Tree', 'command': 'jibo-sdk:new-behavior-tree-file'}
+            {'label': 'New Project', 'command': 'jibo-sdk:new-project'}
             {'type': 'separator'}
-            {'label': 'Open Cheat Sheet', 'command': 'jibo-atom:cheat-sheet'}
+            {'label': 'Open Cheat Sheet', 'command': 'jibo-sdk:cheat-sheet'}
             {'label': 'Atom React Styleguide', 'command': 'atom-react:styleguide'}
             {'type': 'separator'}
-            {'label': 'Login...', 'command': 'jibo-atom:login'}
+            {'label': 'Login...', 'command': 'jibo-sdk:login'}
         ]
     }
 ]
 'context-menu':
     'atom-pane .bodyRenderer': [
-        {'label': 'Play Animation', 'command': 'jibo-atom:play-animation'}
+        {'label': 'Play Animation', 'command': 'jibo-sdk:play-animation'}
     ]
     '.tree-view.full-menu': [
         {'type': 'separator'}
         {
             'label': 'Jibo',
             'submenu': [
-                {'label': 'New Animation', 'command': 'jibo-atom:new-animation-file'}
-                {'label': 'New Behavior Tree', 'command': 'jibo-atom:new-behavior-tree-file'}
-                {'label': 'New Project', 'command': 'jibo-atom:new-project'}
+                {'label': 'New Animation', 'command': 'jibo-sdk:new-animation-file'}
+                {'label': 'New Behavior Tree', 'command': 'jibo-sdk:new-behavior-tree-file'}
+                {'label': 'New Project', 'command': 'jibo-sdk:new-project'}
                 {'type': 'separator'}
-                {'label': 'Open as JSON', 'command': 'jibo-atom:open-as-json'}
+                {'label': 'Open as JSON', 'command': 'jibo-sdk:open-as-json'}
             ]
         }
     ]
