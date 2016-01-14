@@ -2,4 +2,4 @@ The Jibo Software Developer Kit (SDK) gives developers an easy way to build Jibo
 
 Click [here](http://developer.jibo.com) for Jibo SDK documentation.
 
-![Jibo README gif](README.gif)
+![Jibo README gif](http://jiborobot.github.io/jibo-sdk/README.gif)
